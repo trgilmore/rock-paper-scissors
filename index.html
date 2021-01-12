@@ -4,18 +4,50 @@
   <meta charset="utf-8">
   <title>Rock Paper Scissors</title>
   <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+  <h1> Rock -- Paper -- Scissors</h1>
+
   <div class="results">
-    <p id="computer"></p>
-    <p id="player"></p>
-    <p id="winner"></p>
-    <p id="score"></p>
+    <p id="results">Let's Play</p>
   </div>
+
   <div class="buttons">
     <button class="btn" id="rock">Rock</button>
     <button class="btn" id="paper">Paper</button>
     <button class="btn" id="scissors">Scissors</button>
+  </div>
+
+  <div class="scoreboard">
+    <table>
+      <tr>
+        <th>Scoreboard</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th>Win</th>
+        <th>Lose</th>
+        <th>Draw</th>
+      </tr>
+      <tr>
+        <td>Human:</td>
+        <td id="humanscore"></td>
+        <td id="humanloss"></td>
+        <td id="humandraw"></td>
+      </tr>
+      <tr>
+        <td>Computer:</td>
+        <td id="computerscore"></td>
+        <td id="computerloss"></td>
+        <td id="computerdraw"></td>
+      </tr>
+      <tr>
+        <th id="marquee"></th>
+      </tr>
+
+    </table>
   </div>
   <script src=script-ui.js></script>
 </body>
