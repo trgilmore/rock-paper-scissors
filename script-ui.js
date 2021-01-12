@@ -8,13 +8,13 @@ const rock = document.querySelector("#rock")
 const paper = document.querySelector("#paper")
 const scissors = document.querySelector("#scissors")
 
-rock.addEventListener("click", function() { 
+rock.addEventListener("click", function start(results) { 
     results = document.querySelector("#results").textContent = playRound("rock", computerSelection)
 });
-paper.addEventListener("click", function() { 
+paper.addEventListener("click", function start(results) { 
     results = document.querySelector("#results").textContent = playRound("paper", computerSelection)
  });
- scissors.addEventListener("click", function() { 
+ scissors.addEventListener("click", function start(results) { 
     results = document.querySelector("#results").textContent = playRound("scissors", computerSelection)
  });
 
@@ -69,7 +69,7 @@ function playRound (playerSelection, computerSelection){
         return throwdown + "\r\n\r\n" + draw;
     }
 }
-window.addEventListener("click", function () {
+window.addEventListener("click", function score() {
     if (winScore < 5 && loseScore < 5) {
         document.querySelector("#humanscore").textContent = winScore
         document.querySelector("#humanloss").textContent = loseScore
@@ -80,19 +80,15 @@ window.addEventListener("click", function () {
     }else if (loseScore == 5) {
         document.querySelector("#computerscore").textContent = loseScore
         document.querySelector("#humanloss").textContent = loseScore
-        document.querySelector("#marquee").textContent = "Binary Solo: 0101010001101000011001010010000001101000011\r\n1010101101101011000010110111001110011001000000110000101110010011001010010000\r\n00110010001100101011000010110010000100001"
-        window.removeEventListener("click", ()=>{})
+        document.querySelector("#marquee").textContent = "Binary Solo: 010101000110100001\r\n1001010010000001101000011\r\n10101011011010110000101101110011\r\n10011001000000110000101110010011001010010000\r\n00110010001100101011000010110010000100001"
+        rock.removeEventListener("click", function start() {});
+        paper.removeEventListener("click", function start() {});
+        scissors.removeEventListener("click", function start() {});
     } else {
         document.querySelector("#humanscore").textContent = winScore
         document.querySelector("#marquee").textContent = "Suck it Watson"
-        window.removeEventListener("click", ()=>{})
-    }
-    
+        rock.removeEventListener("click", function start() {});
+        paper.removeEventListener("click", function start() {});
+        scissors.removeEventListener("click", function start() {});
+    }    
 });
-function game(number) {
-    for (let index = 0; index < number; index++) {
-        console.log(playRound(playerSelection, computerSelection))
-    }
-    console.log("\nWins: " + winScore + "\nLosses: " + loseScore + "\nDraws: " + drawScore)  
-}
-//game(5);

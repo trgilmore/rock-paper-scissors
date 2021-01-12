@@ -22,15 +22,20 @@
 
   <div class="scoreboard">
     <table>
+      <thead>
       <tr>
-        <th>Scoreboard</th>
+        <th id="title" colspan="4">
+        Scoreboard
+        </th>
       </tr>
       <tr>
-        <th></th>
+        <th id="blank"></th>
         <th>Win</th>
         <th>Lose</th>
         <th>Draw</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>Human:</td>
         <td id="humanscore"></td>
@@ -43,10 +48,12 @@
         <td id="computerloss"></td>
         <td id="computerdraw"></td>
       </tr>
+    </tbody>
+    <tfoot>
       <tr>
-        <th id="marquee"></th>
+        <th id="marquee" colspan="4"></th>
       </tr>
-
+    </tfoot>
     </table>
   </div>
   <script src=script-ui.js></script>

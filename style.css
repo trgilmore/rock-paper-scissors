@@ -5,11 +5,12 @@ h1 {
 }
 .results {
     display: flex;
+    flex-grow: 1;
     justify-content: center;
     border: 3px solid black;
     border-radius: 12px;
+    width: 296px;
     margin-left: 39%;
-    margin-right: 39%;
     height: 250px;
     padding-top: 75px;
     margin-bottom: 20px;
@@ -56,9 +57,21 @@ h1 {
     justify-content: center;
 }
 .scoreboard {
+    display:flex;
+    margin-top: 20px;
     font-family: 'Orbitron';
+    justify-content: center;
 }
-/*@font-face{
-    font-family:'digital-clock-font';
-    src: (digital-7.ttf);
-   }*/
+td, th {
+    border: 1px solid rgb(22, 44, 31);
+    padding: 0.5rem;
+    background-color: #343b34;
+    color:green;
+  }
+  #marquee {
+      width: 296px;
+      height: 100px;
+  }
+#blank {
+    border: 0px;
+}
