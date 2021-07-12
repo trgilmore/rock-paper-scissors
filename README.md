@@ -1,6 +1,7 @@
 # rock-paper-scissors
 Odin Project - Rock Paper Scissors Project
 
+Viewable at https://trgilmore.github.io/rock-paper-scissors/
 
 To-Do:
 1. Create end of game and refresh functions
